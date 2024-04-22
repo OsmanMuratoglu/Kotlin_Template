@@ -24,8 +24,10 @@ fun getCount(str: String): Int {
     }
     return count*/
 
-    //Lösung 4 
+    //Lösung 4
     return str.filter { c -> vowels.contains(c) }.length
+    //Lösung 5
+    return str.filter { c -> arrayOf('a', 'e', 'i', 'u', 'o').contains(c)}.length;
 }
 
 
