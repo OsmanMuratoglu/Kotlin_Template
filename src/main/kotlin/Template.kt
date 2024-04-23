@@ -1,33 +1,19 @@
-fun getCount(str: String): Int {
-    var count = 0
-    val vowels = arrayOf('a', 'e', 'i', 'o', 'u');
+fun twoOldestAges(ages: List<Int>): List<Int> {
 
-    //Lösung 1
-   /* for (char in str) {
-        if (char == 'e' || char == 'a' || char == 'i' || char == 'o' || char == 'u') {
-            count++;
-        }
-    }*/
-   // return count
 
-    // Lösung 2
-   //return str.filter { c -> c=='e' || c == 'a' || c == 'i' || c == 'o' || c == 'u' }.length
+    return listOf(ages.sorted()[ages.size - 2], ages.sorted()[ages.size - 1])
 
-    //Lösung 3
-    /*for(stringChar in str){
-        for(arrayChar in vowels){
-            if(stringChar == arrayChar){
-                count++
-                break
-            }
-        }
-    }
-    return count*/
+   /* return ages
+        .sorted()
+        .drop(ages.size - 2)
 
-    //Lösung 4
-    return str.filter { c -> vowels.contains(c) }.length
-    //Lösung 5
-    return str.filter { c -> arrayOf('a', 'e', 'i', 'u', 'o').contains(c)}.length;
+    return ages
+        .sorted()
+        .slice(ages.size - 2..<ages.size)
+
+    return ages
+        .sortedDescending()
+        .slice(0..1)
+        .reversed()*/
 }
-
 
